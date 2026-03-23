@@ -6,15 +6,27 @@
 </head>
 <body>
 
-<h1>🏋️ POWER HOUSE GYM</h1>
+<h2>🔐 POWER HOUSE GYM</h2>
 
 <div class="container">
-    <button onclick="location.href='dashboard.html'">📊 Dashboard</button>
-    <button onclick="location.href='clientes.html'">👤 Clientes</button>
-    <button onclick="location.href='pagos.html'">💰 Pagos</button>
-    <button onclick="location.href='acceso.html'">🚪 Acceso</button>
-    <button onclick="location.href='reportes.html'">📈 Reportes</button>
+    <input id="user" placeholder="Usuario">
+    <input id="pass" type="password" placeholder="Contraseña">
+
+    <button onclick="login()">Entrar</button>
 </div>
+
+<script>
+function login() {
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
+
+    if(user === "admin" && pass === "1234"){
+        window.location.href = "menu.html";
+    } else {
+        alert("Datos incorrectos");
+    }
+}
+</script>
 
 </body>
 </html>
